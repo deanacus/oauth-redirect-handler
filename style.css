@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
+  line-height: 1.5;
 }
 
 h1 {
@@ -49,6 +50,11 @@ h1 {
 }
 
 h2 {
+  color: rgb(var(--accent-color));
+  font-size: 21px;
+}
+
+h3 {
   color: rgb(var(--accent-color));
   font-size: 18px;
 }
@@ -81,9 +87,7 @@ article {
   word-break: break-all;
 }
 
-article button {
-  align-content: center;
-  align-items: center;
+button {
   align-self: flex-end;
   background: rgb(var(--accent-color));
   border: none;
@@ -91,11 +95,24 @@ article button {
   color: inherit;
   cursor: pointer;
   display: inline-flex;
-  justify-content: center;
+  font-weight: bold;
   padding: 8px 16px;
 }
 
-article button svg {
-  height: 16px;
-  width: 16px;
+::backdrop {
+  background-color: rgb(var(--background-color));
+}
+
+dialog[open] {
+  background: rgb(var(--foreground-color) / 5%);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: auto;
+  max-width: 75ch;
+}
+
+dialog article {
+  padding: 24px;
 }

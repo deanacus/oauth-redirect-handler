@@ -14,7 +14,7 @@ authorization request as the redirect url, and when you follow the link, you
 will end up on the page with each query param separated out on the page ready to
 copy/paste into your server side code.
 
-### NOTE:
+### Note:
 
 This is **_not_** a replacement for standing up your own front end to handle
 these values properly, just an early stage development helper.
