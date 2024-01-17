@@ -1,0 +1,101 @@
+:root {
+  --background-color: 241 248 255;
+  --foreground-color: 26 29 32;
+  --accent-color: 255 139 0;
+
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: 26 29 32;
+    --foreground-color: 241 248 255;
+    --accent-color: 255 139 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+body {
+  justify-content: center;
+  background: rgb(var(--background-color));
+  color: rgb(var(--foreground-color));
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: rgb(var(--accent-color));
+  font-size: 48px;
+}
+
+h2 {
+  color: rgb(var(--accent-color));
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: auto;
+  max-width: 75ch;
+  padding-block: 80px;
+}
+
+main > header {
+  text-align: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-inline: 24px;
+}
+
+.param-value {
+  background: rgb(var(--foreground-color) / 5%);
+  font-family: monospace;
+  max-width: 100%;
+  padding: 24px;
+  word-break: break-all;
+}
+
+article button {
+  align-content: center;
+  align-items: center;
+  align-self: flex-end;
+  background: rgb(var(--accent-color));
+  border: none;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+article button svg {
+  height: 16px;
+  width: 16px;
+}
